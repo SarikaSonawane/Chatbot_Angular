@@ -1,0 +1,22 @@
+
+    .container{
+    height: 100vh;
+    align-content: center;
+    }
+    
+
+    .reset_btn{
+    margin-top: 10px;	
+    color: black;
+    background-color: #09f0e4;
+    width: 200px;
+    }
+    
+    .reset_btn:hover{
+    color: black;
+    background-color: white;
+    }
+    
+    
+    
+    

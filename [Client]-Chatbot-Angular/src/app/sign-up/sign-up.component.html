@@ -1,0 +1,71 @@
+<div class="container" [formGroup]="logFormGroup">
+    <div class="d-flex justify-content-left h-100">
+        <div class="card">
+            <div class="card-header">
+                <h3>Create new account</h3>
+            </div>
+            <div class="card-body">
+
+                <div class="input-group form-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">
+                            <fa-icon [icon]="user_logo"></fa-icon>
+                        </span>
+                    </div>
+                    <input type="text" class="form-control" placeholder="Type your username" formControlName="username">
+                </div>
+                <div class="input-group form-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">
+                            <fa-icon [icon]="email_logo"></fa-icon>
+
+                        </span>
+                    </div>
+                    <input type="email" class="form-control" placeholder="Type your email" formControlName="email">
+                </div>
+                <div class="input-group form-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">
+                            <fa-icon [icon]="mob_logo"></fa-icon>
+                        </span>
+                    </div>
+                    <input type="tel" class="form-control" placeholder="Type your phone number"
+                        formControlName="mobile">
+                </div>
+                <div class="input-group form-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">
+                            <fa-icon [icon]="pass_logo"></fa-icon>
+                        </span>
+                    </div>
+                    <input type="password" class="form-control" placeholder="Type your password"
+                        formControlName="password">
+                </div>
+                <div class="input-group form-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">
+                            <fa-icon [icon]="pass_logo"></fa-icon>
+                        </span>
+                    </div>
+                    <input type="password" class="form-control" placeholder="Re-type your password"
+                        [formControl]="confirmPass">
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="SIGN UP" class="btn float-right signup_btn" (click)="registerUser()"
+                        [disabled]="!logFormGroup.valid">
+                </div>
+
+                <br><br>
+                <div>
+                    Already have an account? <a routerLink="/login">Sign
+                        in</a>
+                </div>
+
+            </div>
+            <div class="card-footer">
+                By clicking on Sign up you, agree to our
+                <a href="#">Terms and Conditions</a> and <a href="#">Privacy Policy</a>.
+            </div>
+        </div>
+    </div>
+</div>
