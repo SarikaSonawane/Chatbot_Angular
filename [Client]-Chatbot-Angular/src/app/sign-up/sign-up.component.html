@@ -13,6 +13,10 @@
                         </span>
                     </div>
                     <input type="text" class="form-control" placeholder="Type your username" formControlName="username">
+
+                    <label for="" style="color: red; font-size: 19px" *ngIf="
+                    logFormGroup.get('username').invalid && logFormGroup.get('username').touched
+                    ">*required</label>
                 </div>
                 <div class="input-group form-group">
                     <div class="input-group-prepend">
@@ -22,6 +26,10 @@
                         </span>
                     </div>
                     <input type="email" class="form-control" placeholder="Type your email" formControlName="email">
+                    <label for="" style="color: red; font-size: 19px" *ngIf="
+                    logFormGroup.get('email').invalid && logFormGroup.get('email').touched
+                    ">*required</label>
+
                 </div>
                 <div class="input-group form-group">
                     <div class="input-group-prepend">
@@ -31,6 +39,10 @@
                     </div>
                     <input type="tel" class="form-control" placeholder="Type your phone number"
                         formControlName="mobile">
+
+                    <label for="" style="color: red; font-size: 19px" *ngIf="
+                        logFormGroup.get('mobile').invalid && logFormGroup.get('mobile').touched
+                        ">*required</label>
                 </div>
                 <div class="input-group form-group">
                     <div class="input-group-prepend">
@@ -40,6 +52,9 @@
                     </div>
                     <input type="password" class="form-control" placeholder="Type your password"
                         formControlName="password">
+                    <label for="" style="color: red; font-size: 19px" *ngIf="
+                        logFormGroup.get('password').invalid && logFormGroup.get('password').touched
+                        ">*required</label>
                 </div>
                 <div class="input-group form-group">
                     <div class="input-group-prepend">
@@ -49,6 +64,7 @@
                     </div>
                     <input type="password" class="form-control" placeholder="Re-type your password"
                         [formControl]="confirmPass">
+
                 </div>
                 <div class="form-group">
                     <input type="submit" value="SIGN UP" class="btn float-right signup_btn" (click)="registerUser()"

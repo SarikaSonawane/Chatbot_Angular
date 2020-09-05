@@ -1,0 +1,92 @@
+<div style="background: url('https://cubettech.com/wp-content/uploads/2017/10/banner2.jpg') center no-repeat; background-size: cover;"
+    [formGroup]="profileFormGroup">
+
+    <div class="container">
+
+
+
+        <div class="d-flex justify-content-center h-100">
+            <div class="card">
+                <div class="card-header">
+                    <h3>Profile</h3>
+                </div>
+                <div class="card-body">
+                    <div class="profile-img">
+                        <img src="bot_1.png" alt="" />
+                        <div class="file btn btn-lg btn-primary">
+                            Change Photo
+                            <input type="file" name="file" />
+                        </div>
+                    </div>
+                    <div class="input-group form-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">
+                                <fa-icon [icon]="user_logo"></fa-icon>
+                            </span>
+                        </div>
+                        <input style="background-color: black;" type="text" class="form-control"
+                            placeholder="Type your username" required="required" formControlName="usename">
+                    </div>
+                    <div class="input-group form-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="fas fa-envelope"></i></span>
+                        </div>
+                        <input style="background-color: black;" type="email" class="form-control"
+                            placeholder="Type your email" required="required" formControlName="email">
+                    </div>
+                    <div class="input-group form-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="fas fa-mobile"></i></span>
+                        </div>
+                        <input style="background-color: black;" type="tel" class="form-control"
+                            placeholder="Type your phone number" formControlName="mobile">
+                    </div>
+                    <div class="input-group form-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="fas fa-birthday-cake"></i></span>
+                        </div>
+                        <input style="background-color: lightdark;" type="date" class="form-control"
+                            placeholder="Type your DOB">
+                    </div>
+                    <div class="input-group form-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="fas fa-map-marker-alt"></i></span>
+                        </div>
+                        <input style="background-color: black;" type="address" class="form-control"
+                            placeholder="Type your address">
+                    </div>
+                    <div class="input-group form-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="fas fa-key"></i></span>
+                        </div>
+                        <input style="background-color: black;" type="password" class="form-control"
+                            placeholder="Create New Password">
+                    </div>
+                    <div class="input-group form-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="fas fa-key"></i></span>
+                        </div>
+                        <input style="background-color: black;" type="password" class="form-control"
+                            placeholder="Re-type Your New Password">
+                    </div>
+                    <div class="input-group form-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="fas fa-key"></i></span>
+                        </div>
+                        <input style="background-color: black;" type="password" class="form-control"
+                            placeholder="Type Your Existing Password" formControlName="password">
+                    </div>
+
+                    <div class="form-group">
+                        <input type="submit" value="SAVE" class="btn float-right save_btn">
+                    </div>
+                    <div class="form-group">
+                        <div class="d-flex justify-content-left">
+                            <input type="reset" value="RESET" class="btn float-right save_btn">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>

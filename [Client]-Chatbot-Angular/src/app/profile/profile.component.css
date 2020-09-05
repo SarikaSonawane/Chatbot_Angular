@@ -1,0 +1,88 @@
+@import "https://use.fontawesome.com/releases/v5.3.1/css/all.css";
+
+html,body{
+    background-color: skyblue;
+    background-size: none;
+    background-repeat: no-repeat;
+    height: 100%;
+    font-family: 'Numans', sans-serif;
+    }
+    
+    .container{
+    height: 100%;
+    align-content: center;
+    }
+    
+    .card{  
+    margin: 100px 0 100px 0;
+    height: max-content;
+    width: 500px;
+    background-color: rgb(0, 0, 0) !important;
+    border-radius: 20px;
+    }
+    
+    .card-header h3{
+    text-align: center;   
+    color: #09f0e4;
+    }
+
+    .profile-img{
+        text-align: center;
+    }
+    .profile-img img{
+        width: 70%;
+        height: 100%;
+    }
+    .profile-img .file {
+        position: relative;
+        overflow: hidden;
+        margin-top: -20%;
+        width: 70%;
+        border: none;
+        border-radius: 0;
+        font-size: 15px;
+        background: #212529b8;
+    }
+    .profile-img .file input {
+        position: absolute;
+        opacity: 0;
+        right: 0;
+        top: 0;
+    }
+    
+    .input-group text{
+        color: red;
+    }
+
+    .input-group-prepend{
+        width: 100px;
+    }
+
+    .input-group-prepend span{
+    width: 50px;
+    background-color: black;
+    color: skyblue;
+    border: 100 !important;
+    }
+
+    .input-group ::placeholder{
+    color: skyblue;
+    }
+
+    input:focus{
+    outline: 0 0 100 100  !important;
+    box-shadow: 100 100 100 100 !important;
+    }
+    
+    .save_btn{
+    margin-top: 10px;	
+    color: black;
+    background-color: skyblue;
+    width: 100px;
+    }
+    
+    .save_btn:hover{
+    color: black;
+    background-color: white;
+    }
+    

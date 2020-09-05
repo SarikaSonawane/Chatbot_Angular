@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container" [formGroup]="logInFormGroup">
     <div class="d-flex justify-content-left h-100">
         <div class="card">
             <div class="card-header">
@@ -13,7 +13,11 @@
                             <fa-icon [icon]="user_logo"></fa-icon>
                         </span>
                     </div>
-                    <input type="email" class="form-control" placeholder="Type your email">
+                    <input type="email" class="form-control" placeholder="Type your email" formControlName="email">
+
+                    <label for="" style="color: red; font-size: 16px" *ngIf="
+                    logInFormGroup.get('email').invalid && logInFormGroup.get('email').touched
+                    ">*Email required</label>
                 </div>
                 <div class="input-group form-group">
                     <div class="input-group-prepend">
@@ -21,7 +25,11 @@
                             <fa-icon [icon]="pass_logo"></fa-icon>
                         </span>
                     </div>
-                    <input type="password" class="form-control" placeholder="Type your password">
+                    <input type="password" class="form-control" placeholder="Type your password"
+                        formControlName="password">
+                    <label for="" style="color: red; font-size: 16px" *ngIf="
+                    logInFormGroup.get('password').invalid && logInFormGroup.get('password').touched
+                    ">*Password required</label>
                 </div>
 
                 <div class="row align-items-center remember">
@@ -29,18 +37,20 @@
                 </div>
 
                 <div class="form-group">
-                    <input type="submit" value="LOG IN" class="btn float-right login_btn" (click)="gotoHome('home')">
+                    <input type="submit" value="LOG IN" class="btn float-right login_btn" (click)="loginProcess()"
+                        [disabled]="!logInFormGroup.valid">
                 </div>
 
-                <div class="container-fluid d-flex" style="margin-top: 80px; margin-left: 25%;">
-                    <div (click)="signInWithFB()" style="color: rgb(0,0,0,0.5);">
-                        <fa-icon [icon]="facebook_logo" style="font-size: 50px; color: skyblue;"></fa-icon>
-                    </div>
-
-                    <div (click)="signInWithGoogle()">
-                        <fa-icon [icon]="google_logo" style="font-size: 50px; color: tomato; margin-left: 50px;">
+                <div class="container-fluid d-flex" style="margin-top: 80px;  padding: 30px;">
+                    <button (click)="signInWithFB()">
+                        <fa-icon [icon]="facebook_logo" style="font-size: 50px; color: skyblue;padding-left: 10px;">
                         </fa-icon>
-                    </div>
+                    </button>
+
+                    <button (click)="signInWithGoogle()">
+                        <fa-icon [icon]="google_logo" style="font-size: 50px; color: tomato; margin-left: 10px;">
+                        </fa-icon>
+                    </button>
 
                 </div>
 

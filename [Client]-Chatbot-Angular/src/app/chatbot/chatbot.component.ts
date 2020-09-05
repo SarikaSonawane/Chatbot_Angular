@@ -2,20 +2,19 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-contact-us',
-  templateUrl: './contact-us.component.html',
-  styleUrls: ['./contact-us.component.css']
+  selector: 'app-chatbot',
+  templateUrl: './chatbot.component.html',
+  styleUrls: ['./chatbot.component.css']
 })
-export class ContactUsComponent implements OnInit {
-
+export class ChatbotComponent implements OnInit {
 
   constructor(private router: Router) { }
+
   ngOnInit(): void {
 
     if (!sessionStorage.getItem('user')) {
       this.router.navigate(['login']);
     }
   }
-
 
 }

@@ -13,7 +13,11 @@ import { HomeComponent } from './home/home.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { FeaturesComponent } from './features/features.component';
 import { GoogleLoginProvider, FacebookLoginProvider } from 'angularx-social-login';
-import { from } from 'rxjs';
+import { LogOutComponent } from './log-out/log-out.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { ChatbotComponent } from './chatbot/chatbot.component';
+import { ProfileComponent } from './profile/profile.component';
+import { ErrorPageComponent } from './error-page/error-page.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +28,10 @@ import { from } from 'rxjs';
     HomeComponent,
     ContactUsComponent,
     FeaturesComponent,
+    LogOutComponent,
+    ChatbotComponent,
+    ProfileComponent,
+    ErrorPageComponent,
   ],
   imports: [
     BrowserModule,
@@ -31,7 +39,9 @@ import { from } from 'rxjs';
     FontAwesomeModule,
     SocialLoginModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    NgbModule
+
   ],
   providers: [
     {
